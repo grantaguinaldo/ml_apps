@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Image Classification</title>
+    <meta charset="utf-8">
+
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+
+    <!-- https://github.com/tensorflow/tfjs/issues/1830  -->
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.2"></script>
+
+</head>
+<body>
+
+    <!-- Add div tag that we can access from within the js file. -->
+    <div id="console"></div>
+
+    <!-- Add an image that we will use to test -->
+    <img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=227 height=227/>
+
+
+    <!-- Link to external js file that will hold ML code. -->
+    <script type="text/javascript" src="./app.js"></script>
+
+</body>
+</html>
