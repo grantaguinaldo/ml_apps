@@ -2,7 +2,7 @@ console.log('Hello!');
 
 // https://plot.ly/javascript/time-series/
 
-Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv", function(err, rows){
+Plotly.d3.csv("https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_in/BRK-A.csv", function(err, rows){
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
@@ -12,28 +12,28 @@ Plotly.d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-
 var trace1 = {
   type: "scatter",
   mode: "lines",
-  name: 'AAPL High',
+  name: 'BRK-A Adjusted Close',
   x: unpack(rows, 'Date'),
-  y: unpack(rows, 'AAPL.High'),
+  y: unpack(rows, 'Adj Close'),
   line: {color: '#17BECF'}
 }
 
 var trace2 = {
   type: "scatter",
   mode: "lines",
-  name: 'AAPL Low',
+  name: 'BRK-A Close',
   x: unpack(rows, 'Date'),
-  y: unpack(rows, 'AAPL.Low'),
+  y: unpack(rows, 'Close'),
   line: {color: '#7F7F7F'}
 }
 
 var data = [trace1,trace2];
 
 var layout = {
-  title: 'Time Series with Rangeslider',
+  title: 'Historicial Data for Berkshire Hathaway Inc. (BRK-A)',
   xaxis: {
     autorange: true,
-    range: ['2015-02-17', '2017-02-16'],
+    range: ['1980-03-17', '2019-08-30'],
     rangeselector: {buttons: [
         {
           count: 1,
@@ -49,12 +49,12 @@ var layout = {
         },
         {step: 'all'}
       ]},
-    rangeslider: {range: ['2015-02-17', '2017-02-16']},
+    rangeslider: {range: ['1980-03-17', '2019-08-30']},
     type: 'date'
   },
   yaxis: {
     autorange: true,
-    range: [86.8700008333, 138.870004167],
+    range: [200, 350000],
     type: 'linear'
   }
 };
