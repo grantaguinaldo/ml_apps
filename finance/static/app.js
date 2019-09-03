@@ -2,7 +2,7 @@ console.log('Hello!');
 
 // https://plot.ly/javascript/time-series/
 
-Plotly.d3.csv("https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_in/BRK-A.csv", function(err, rows){
+Plotly.d3.csv("https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/predicted_df.csv", function(err, rows){
 
   function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
@@ -12,25 +12,25 @@ Plotly.d3.csv("https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/f
 var trace1 = {
   type: "scatter",
   mode: "lines",
-  name: 'BRK-A Adjusted Close',
-  x: unpack(rows, 'Date'),
-  y: unpack(rows, 'Adj Close'),
+  name: 'BRK-A Forecasted Close Value',
+  x: unpack(rows, 'date'),
+  y: unpack(rows, 'forecast'),
   line: {color: '#17BECF'}
 }
 
 var trace2 = {
   type: "scatter",
   mode: "lines",
-  name: 'BRK-A Close',
-  x: unpack(rows, 'Date'),
-  y: unpack(rows, 'Close'),
+  name: 'BRK-A Actual Close Value',
+  x: unpack(rows, 'date'),
+  y: unpack(rows, 'actual'),
   line: {color: '#7F7F7F'}
 }
 
 var data = [trace1,trace2];
 
 var layout = {
-  title: 'Historicial Data for Berkshire Hathaway Inc. (BRK-A)',
+  title: 'Forecasted vs Actual Close Values for Berkshire Hathaway Inc. (BRK-A)',
   xaxis: {
     autorange: true,
     range: ['1980-03-17', '2019-08-30'],
