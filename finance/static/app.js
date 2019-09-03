@@ -59,5 +59,5 @@ var layout = {
   }
 };
 
-Plotly.newPlot('chart', data, layout, {showSendToCloud: true});
+Plotly.newPlot('chart', data, layout, {responsive: true});
 });
