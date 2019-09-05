@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <head>
+  <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<meta charset="utf-8">
+</head>
+<body>
+    <center>
+            <h1 class="sansserif">Homework 2</h1>
+
+            <p class="sansserif">
+                This page highlights the work completed to complete a time-series estimation of stock prices for  Berkshire Hathaway Inc. (BRK-A) using three different methods: Linear Regression, Ridge Regression and kNN Regression.
+            </p>
+            <br>
+                <br>
+            <br>
+        <div id="opt1_ridge_div"></div>
+            <br>
+                <br>
+            <br>
+        <div id="opt1_lr_div"></div>
+            <br>
+                <br>
+            <br>
+         <div id="opt1_knn_div"></div>
+            <br>
+                <br>
+            <br>
+        <div id="opt2_ridge_div"></div>
+            <br>
+                <br>
+            <br>
+        <div id="opt2_lr_div"></div>
+            <br>
+                <br>
+            <br>
+         <div id="opt2_knn_div"></div>
+    </center>
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+</body>
+</html>
+
