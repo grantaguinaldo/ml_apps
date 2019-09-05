@@ -2,19 +2,19 @@ console.log('Hello!');
 
 // https://plot.ly/javascript/time-series/
 
-var actual_data = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_in/BRK-A.csv'
+var actual_data = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_in/BRK-A.csv'
 
-var opt2_ridge = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt2_y_pred_ridge_df.csv'
+var opt2_ridge = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt2_y_pred_ridge_df.csv'
 
-var opt2_lr = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt2_y_pred_lr_df.csv'
+var opt2_lr = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt2_y_pred_lr_df.csv'
 
-var opt2_knn = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt2_y_pred_knn_df.csv'
+var opt2_knn = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt2_y_pred_knn_df.csv'
 
-var opt1_ridge = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt1_y_pred_ridge_df.csv'
+var opt1_ridge = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt1_y_pred_ridge_df.csv'
 
-var opt1_lr = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt1_y_pred_lr_df.csv'
+var opt1_lr = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt1_y_pred_lr_df.csv'
 
-var opt1_knn = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance/data_out/opt1_y_pred_knn_df.csv'
+var opt1_knn = 'https://raw.githubusercontent.com/grantaguinaldo/ml_apps/master/finance_prediction/data_out/opt1_y_pred_knn_df.csv'
 
 
 // Option 1 Ridge Regression
